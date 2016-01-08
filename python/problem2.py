@@ -12,12 +12,12 @@ def fibonacci(n):
         return fibonacci(n - 2) + fibonacci(n - 1)
 
 
-while true == 1:
+while True:
     index += 1
     if fibonacci(index) < 4000000:
         if fibonacci(index) % 2 == 0:
             result += fibonacci(index)
     else:
-        true = 0
+        break
 
 print(result)
