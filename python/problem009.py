@@ -1,3 +1,5 @@
+result = 0
+
 for a in range(1, 999):
     for b in range(1, 1000 - a):
         c = 1000 - a - b
