@@ -5,8 +5,7 @@ for i in range(2, 354295):
     value = 0
     for a in range(0, len(str_i)):
         num = int(str_i[a:a+1])
-        five_time = num*num*num*num*num
-        value += five_time
+        value += num**5
     if value == i:
         result += i
 
