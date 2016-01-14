@@ -8,10 +8,10 @@ def factorial(n):
 result = 0
 
 for a in range(10, 1000000):
-    summary = 0
+    sum_of_numbers = 0
     for b in str(a):
-        summary += factorial(int(b))
-    if a == summary:
+        sum_of_numbers += factorial(int(b))
+    if a == sum_of_numbers:
         result += a
 
 print(result)
