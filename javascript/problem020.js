@@ -1,5 +1,3 @@
-var result = 0;
-
 var numberArray = [1];
 
 function calculate(a){
@@ -30,10 +28,8 @@ function getValue(){
 
 for(a=2; a<100; a++){
   calculate(a);
-  var value = getValue();
-  if(result < value){
-    result = value;
-  }
 }
+
+var result = getValue();
 
 console.log(result);
