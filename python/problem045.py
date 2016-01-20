@@ -42,6 +42,6 @@ while count_number < 3:
         index_t += 1
         index_p += 1
         index_h += 1
-    
+
 result = triangular_number
 print(result)
