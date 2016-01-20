@@ -6,8 +6,11 @@
 - JavaScript
 
 ## Development Tools
-- Python : PyCharm, https://www.jetbrains.com/pycharm/
-- JavaScript : Atom, https://atom.io/
+- Python
+  - PyCharm, https://www.jetbrains.com/pycharm/
+- JavaScript
+  - Atom, https://atom.io/ 
+  - Node.js, https://nodejs.org/
 
 ## Problems
 ### You can link to Problem xxx with the following URI:
