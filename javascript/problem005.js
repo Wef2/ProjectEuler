@@ -1,6 +1,7 @@
 var primeNumbers = [2];
 var maxValues = [];
 var tempValues = [];
+
 function isPrime(n){
 
   for(a in primeNumbers){
@@ -9,6 +10,20 @@ function isPrime(n){
     }
   }
   return true;
+}
+
+function initTempValues(){
+  for(a in tempValues){
+    tempValues[a] = 0;
+  }
+}
+
+function square(x, y){
+  var value = 1;
+  for(a=0; a<y; a++){
+    value = value * x;
+  }
+  return value;
 }
 
 for(i=3; i<=20; i++){
@@ -20,12 +35,6 @@ for(i=3; i<=20; i++){
 for(a in primeNumbers){
   maxValues.push(0);
   tempValues.push(0);
-}
-
-function initTempValues(){
-  for(a in tempValues){
-    tempValues[a] = 0;
-  }
 }
 
 for(x=2; x<=20; x++){
@@ -46,14 +55,6 @@ for(x=2; x<=20; x++){
       maxValues[y] = tempValues[y];
     }
   }
-}
-
-function square(x, y){
-  var value = 1;
-  for(a=0; a<y; a++){
-    value = value * x;
-  }
-  return value;
 }
 
 var result = 1;
