@@ -4,15 +4,18 @@
 ## Program Languages
 - Python : https://www.python.org/
 - JavaScript
+- Groovy : http://www.groovy-lang.org/
 
 ## Development Tools
 - Python
   - PyCharm, https://www.jetbrains.com/pycharm/
 - JavaScript
-  - Atom, https://atom.io/ 
+  - Atom, https://atom.io/
   - Node.js, https://nodejs.org/
+- Groovy
+  - IntelliJ IDEA, https://www.jetbrains.com/idea/
 
 ## Problems
 ### You can link to Problem xxx with the following URI:
-- English : http://projecteuler.net/problem=xxx / 1 to 533
-- Korean : http://euler.synap.co.kr/prob_detail.php?id=xxx / 1 to 113
+- English : http://projecteuler.net/problem=number / Number : 1 to 543
+- Korean : http://euler.synap.co.kr/prob_detail.php?id=number / Number : 1 to 113
