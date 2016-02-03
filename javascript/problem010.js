@@ -1,31 +1,18 @@
-var primeNumbers = [2];
+var array = new Array(2000000);
 
-function isPrimeNumber(n){
-
-    for(i in primeNumbers){
-      if(n % primeNumbers[i] == 0){
-        return false;
-      }
+for(i=2; i<Math.sqrt(2000000); i++){
+  if(array[i] == undefined){
+    for(j=i+i; j<2000000; j = j + i){
+      array[j] = false;
     }
-
-    return true;
+  }
 }
 
-var result = 2;
-var index = 3;
-while(index < Math.sqrt(2000000)){
-  if(isPrimeNumber(index)){
-    primeNumbers.push(index);
-    result = result + index;
+var result = 0;
+for(i=2; i<2000000; i++){
+  if(array[i] == undefined){
+    result = result + i;
   }
-  index = index + 2;
-}
-
-while(index < 2000000){
-  if(isPrimeNumber(index)){
-    result = result + index;
-  }
-  index = index + 2;
 }
 
 console.log(result);
