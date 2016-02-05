@@ -32,6 +32,6 @@ public class Problem010 {
 
     public static void main(String args[]) {
         Problem010 problem = new Problem010();
-        System.out.println(problem.result().toString());
+        System.out.println(problem.result());
     }
 }
