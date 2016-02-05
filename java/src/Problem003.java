@@ -1,4 +1,3 @@
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +23,7 @@ public class Problem003 {
         int index = 0;
         primeNumbers.add(2);
         while (value > 1) {
-            if (value % primeNumbers.get(index)== 0) {
+            if (value % primeNumbers.get(index) == 0) {
                 value = value / primeNumbers.get(index);
             } else {
                 if (isPrime(currentNumber)) {
