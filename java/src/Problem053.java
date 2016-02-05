@@ -42,5 +42,6 @@ public class Problem053 {
     public static void main(String args[]) {
         Problem053 problem = new Problem053();
         System.out.println(problem.result());
+        System.out.println(problem.factorial(100));
     }
 }
