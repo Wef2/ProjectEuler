@@ -1,32 +1,18 @@
-prime_numbers = [2]
-current_number = 3
+import math
 
+number_array = [True]*200000
 
-def set_prime_number(n):
-    global current_number
-    while True:
-        count = 0
-        prime_numbers.append(current_number)
-        for i in prime_numbers:
-            if count > 1:
-                break
-            if current_number % i == 0:
-                count += 1
-        if count == 1:
-            current_number += 1
-            break
-        else:
-            prime_numbers.pop()
-            current_number += 1
+for i in range(2, int(math.sqrt(200000))):
+    if number_array[i]:
+        j = i+i
+        while j < 200000:
+            number_array[j] = False
+            j += i
 
-
-index = 0
-
-while True:
-    set_prime_number(index)
-    if index > 10000:
-        break
-    index += 1
-
-result = prime_numbers[10000]
+result = 1
+count = 0
+while count<10001:
+    result = result + 1;
+    if number_array[result]:
+        count = count + 1;
 print(result)

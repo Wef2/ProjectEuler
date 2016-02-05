@@ -1,43 +1,21 @@
-var primeNumbers = [2];
-var currentNumber = 3;
+var array = new Array(200000);
 
-function setPrimeNumber(n){
-
-  while(true){
-    var count = 0;
-
-    primeNumbers.push(currentNumber);
-
-    for(i in primeNumbers){
-      if(count > 1){
-        break;
-      }
-      if(currentNumber % i == 0){
-        count = count + 1;
-      }
-    }
-
-    if(count == 1){
-      currentNumber = currentNumber + 1;
-      break;
-    }
-    else{
-      primeNumbers.pop();
-      currentNumber = currentNumber + 1;
+for(i=2; i<Math.sqrt(200000); i++){
+  if(array[i] == undefined){
+    for(j=i+i; j<200000; j = j + i){
+      array[j] = false;
     }
   }
 }
 
-var index = 0;
-
-while(true){
-  setPrimeNumber(index);
-  if(index > 10000){
-    break;
-  }
+var count = 0;
+var index = 1;
+while(count < 10001){
   index = index + 1;
+  if(array[index] == undefined){
+    count = count + 1;
+  }
 }
-
-result = primeNumbers[10000];
+var result = index;
 
 console.log(result);
