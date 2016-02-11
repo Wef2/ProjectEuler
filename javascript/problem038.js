@@ -1,10 +1,10 @@
 function toNine(n){
-  var i = 1;
+  var a = 1;
   var str = "";
   while(str.length < 9){
-    var number = n * i;
+    var number = n * a;
     str = str + number;
-    i = i + 1;
+    a = a + 1;
   }
   if(str.length != 9){
     return false;
@@ -23,19 +23,18 @@ function isPandigital(m){
   return returnValue;
 }
 
-var index = 1;
 var maxPandigital = 0;
-while(index < 10000){
-  var nine = toNine(index);
+for(i = 1; i < 10000; i++){
+  var nine = toNine(i);
   if(nine != false){
     if(isPandigital(nine)){
       var pandigital = parseInt(nine);
       if(maxPandigital < pandigital){
         maxPandigital = pandigital;
       }
-    };
+    }
   }
-  index = index + 1;
 }
+
 var result = maxPandigital;
 console.log(result);

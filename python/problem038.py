@@ -23,16 +23,14 @@ def is_pandigital(m):
     return return_value
 
 
-index = 1
 max_pandigital = 0
-while index < 10000:
-    nine = to_nine(index)
+for i in range(1, 10000):
+    nine = to_nine(i)
     if nine is not False:
         if is_pandigital(nine):
             pandigital = int(nine)
             if max_pandigital < pandigital:
                 max_pandigital = pandigital
-    index += 1
 
 result = max_pandigital
 print(result)
