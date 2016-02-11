@@ -15,15 +15,13 @@ function triangle(p){
   return number;
 }
 
-var index = 3;
 var maxvalue = 0;
 var result = 0;
-while(index <= 1000){
-  if(triangle(index) > maxvalue){
-    maxvalue = triangle(index);
-    result = index;
+for(i = 12; i <= 1000; i++){
+  if(triangle(i) > maxvalue){
+    maxvalue = triangle(i);
+    result = i;
   }
-  index = index + 1;
 }
 
 console.log(result);

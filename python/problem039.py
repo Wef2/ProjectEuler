@@ -11,13 +11,13 @@ def triangle(p):
     return number
 
 
-index = 3
+
 maxvalue = 0
 result = 0
-while index <= 1000:
-    if triangle(index) > maxvalue:
-        maxvalue = triangle(index)
-        result = index
-    index += 1
+for i in range(12, 1001):
+    if triangle(i) > maxvalue:
+        maxvalue = triangle(i)
+        result = i
+
 
 print(result)
