@@ -1,23 +1,26 @@
 var processValue = 1;
 var resultNumber = 1;
+var array = new Array();
 
 for(i=1; i<=999999; i++){
-  var n = i;
-  var tempProcessValue = 0;
-  while(true){
-    if(n==1){
-      break;
-    }
-    else if(n%2 == 0){
-      n = n / 2;
+  var number = i;
+  var tempValue = 0;
+  while(number!=1){
+    if(number % 2 == 0){
+      number = number / 2;
     }
     else{
-      n = 3*n + 1;
+      number = 3*number + 1;
     }
-    tempProcessValue = tempProcessValue + 1;
+    tempValue = tempValue + 1;
+    if(array[number] != undefined){
+      tempValue = tempValue + array[number];
+      break;
+    }
   }
-  if(tempProcessValue > processValue){
-    processValue = tempProcessValue
+  array[i] = tempValue;
+  if(tempValue > processValue){
+    processValue = tempValue;
     resultNumber = i;
   }
 }

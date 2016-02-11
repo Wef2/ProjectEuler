@@ -1,16 +1,14 @@
-import java.math.BigInteger;
-
 /**
  * Created by 김 on 2016-02-05.
  */
 public class Problem048 {
 
-    long lastTen(long x){
+    long lastTen(long x) {
         long value = 1;
-        for(int i=1; i<=x; i++){
+        for (int i = 1; i <= x; i++) {
             value = value * x;
             String str = Long.toString(value);
-            if(str.length() > 10){
+            if (str.length() > 10) {
                 str = str.substring((str.length() - 10), str.length());
                 value = Long.parseLong(str);
             }
@@ -18,9 +16,9 @@ public class Problem048 {
         return value;
     }
 
-    long result(){
+    long result() {
         long resultValue = 0;
-        for(int i=1; i<=1000; i++){
+        for (int i = 1; i <= 1000; i++) {
             resultValue = resultValue + lastTen(i);
         }
         String resultStr = Long.toString(resultValue);
@@ -33,4 +31,5 @@ public class Problem048 {
         Problem048 problem = new Problem048();
         System.out.println(problem.result());
     }
+
 }
